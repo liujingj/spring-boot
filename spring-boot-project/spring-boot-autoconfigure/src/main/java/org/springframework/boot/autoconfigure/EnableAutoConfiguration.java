@@ -78,8 +78,9 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 @Documented
 @Inherited
 @AutoConfigurationPackage
+//import 将符合条件的@Configuration配置加载到当前springboot创建的IoC容器  借助springFactoryLoader的支持
 @Import(AutoConfigurationImportSelector.class)
-public @interface EnableAutoConfiguration {
+public @interface EnableAutoConfiguration {//借助import的支持 将符合自动配置条件的bean定义加载到IoC容器中
 
 	String ENABLED_OVERRIDE_PROPERTY = "spring.boot.enableautoconfiguration";
 
